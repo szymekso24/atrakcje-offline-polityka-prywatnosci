@@ -34,13 +34,13 @@ li { margin: 4px 0; }
 
 <h2>Co zostaje na telefonie</h2>
 <ul>
-  <li><strong>Pobrane regiony</strong> (mapa, drogi, atrakcje, zdjęcia, opisy, opinie), <strong>ulubione, plany dnia i ukryte opinie</strong> są zapisane tylko w pamięci aplikacji na telefonie. Regiony nie trafiają do kopii zapasowej Google w chmurze; mogą zostać przeniesione przy przenoszeniu danych na nowy telefon.</li>
+  <li><strong>Pobrane regiony</strong> (mapa, drogi, atrakcje, zdjęcia, opisy, opinie), <strong>ulubione, plany dnia, odwiedzone miejsca („Byłem tu”), zgłoszenia błędów w danych i ukryte opinie</strong> są zapisane tylko w pamięci aplikacji na telefonie. Regiony nie trafiają do kopii zapasowej Google w chmurze; mogą zostać przeniesione przy przenoszeniu danych na nowy telefon.</li>
   <li><strong>Lokalizacja (GPS)</strong> służy wyłącznie na telefonie: do pokazania Twojej pozycji, początku trasy, prowadzenia, listy „W pobliżu” i planu dnia. Aplikacja nie wysyła jej nigdzie i nie korzysta z lokalizacji w tle (tylko gdy aplikacja jest na ekranie).</li>
   <li>Dane usuniesz, usuwając region w aplikacji albo odinstalowując aplikację.</li>
 </ul>
 
 <h2>Z jakimi serwisami łączy się aplikacja</h2>
-<p>Aplikacja pobiera dane z publicznych serwisów tylko przy wybieraniu i pobieraniu regionu (pobieranie działa tylko przez Wi-Fi). Do żadnego z nich nie wysyła Twojej pozycji ani danych osobowych. Jak przy każdym połączeniu internetowym, serwer widzi adres IP telefonu i nagłówek z nazwą i wersją aplikacji oraz adresem kontaktowym twórcy. Serwisy te przetwarzają adres IP według własnych zasad.</p>
+<p>Aplikacja pobiera dane z publicznych serwisów tylko przy wybieraniu i pobieraniu regionu (pobieranie działa tylko przez Wi-Fi), a do OpenStreetMap wysyła zgłoszenia błędów w danych, jeśli je napiszesz. Do żadnego z serwisów nie wysyła Twojej pozycji ani danych o Tobie. Jak przy każdym połączeniu internetowym, serwer widzi adres IP telefonu i nagłówek z nazwą i wersją aplikacji oraz adresem kontaktowym twórcy. Serwisy te przetwarzają adres IP według własnych zasad.</p>
 <div class="table">
 <table>
   <tr><th>Serwis</th><th>Po co</th><th>Co ujawnia zapytanie</th></tr>
@@ -49,6 +49,7 @@ li { margin: 4px 0; }
   <tr><td><a href="https://download.geofabrik.de">Geofabrik</a></td><td>dane OpenStreetMap (drogi, atrakcje, szlaki)</td><td>pliki województw lub krajów obejmujące region</td></tr>
   <tr><td><a href="https://mangrove.reviews">Mangrove Reviews</a></td><td>opinie o atrakcjach</td><td>nic o regionie — pobierana jest cała publiczna baza opinii</td></tr>
   <tr><td>Wikidata, Wikimedia Commons, Wikipedia</td><td>zdjęcia i opisy atrakcji</td><td>nazwy plików i artykułów o atrakcjach w regionie</td></tr>
+  <tr><td><a href="https://www.openstreetmap.org">OpenStreetMap</a> (notatki)</td><td>zgłaszanie błędów w danych</td><td>treść zgłoszenia, współrzędne i link do zgłaszanej atrakcji (opis niżej)</td></tr>
 </table>
 </div>
 <p>Gdy dotkniesz linku (strona atrakcji, artykuł w Wikipedii, licencja zdjęcia), otwiera się przeglądarka i obowiązują zasady odwiedzanej strony.</p>
@@ -56,7 +57,10 @@ li { margin: 4px 0; }
 <h2>Zgłaszanie opinii</h2>
 <p>Przy opinii możesz wybrać „Zgłoś tę opinię”. Aplikacja otwiera wtedy Twój program pocztowy z gotową wiadomością do twórcy (miejsce, autor, data, treść i podpis opinii oraz pole na powód). Wiadomość wysyłasz sam; twórca otrzymuje ją razem z Twoim adresem e-mail. Zgłoszenie służy tylko do sprawdzenia opinii i zablokowania jej w kolejnej wersji aplikacji (podstawa: prawnie uzasadniony interes, czyli moderacja treści). Wiadomość jest usuwana po rozpatrzeniu, najpóźniej po 12 miesiącach. Zgłoszona opinia, którą twórca zablokuje, przestaje być wyświetlana w aplikacji; opinię możesz też sam ukryć na swoim telefonie bez zgłaszania.</p>
 
-<h2>Eksport ulubionych i planów</h2>
+<h2>Zgłaszanie błędów w danych</h2>
+<p>Na karcie atrakcji możesz wybrać „Zgłoś błąd w danych” (np. miejsce zamknięte, złe godziny otwarcia) i dopisać opis. Aplikacja wysyła zgłoszenie jako anonimową notatkę do <a href="https://wiki.openstreetmap.org/wiki/Notes">OpenStreetMap</a>, gdy telefon jest w sieci Wi-Fi; do tego czasu zgłoszenie czeka na telefonie. Notatka zawiera rodzaj problemu, nazwę, współrzędne i link do atrakcji, Twój opis i dopisek o aplikacji. Jest publiczna: każdy może ją przeczytać na openstreetmap.org, a wolontariusze poprawiają na jej podstawie mapę. Nie zawiera Twojej pozycji ani danych o Tobie, dlatego nie wpisuj w opisie danych osobowych. OpenStreetMap Foundation widzi adres IP telefonu i przetwarza go według <a href="https://osmfoundation.org/wiki/Privacy_Policy">własnej polityki prywatności</a>. Lista „Moje zgłoszenia” jest tylko na telefonie; wysłane zgłoszenia znikają z niej po 30 dniach, a czekające możesz usunąć przed wysłaniem.</p>
+
+<h2>Eksport ulubionych, planów i odwiedzonych miejsc</h2>
 <p>Plik eksportu powstaje na telefonie i trafia tylko tam, gdzie go sam udostępnisz (np. komunikator, e-mail, dysk).</p>
 
 <h2>Uprawnienia</h2>
@@ -64,14 +68,14 @@ li { margin: 4px 0; }
   <li><strong>Lokalizacja</strong> — pozycja na mapie, trasy i prowadzenie (tylko gdy aplikacja jest na ekranie).</li>
   <li><strong>Powiadomienia</strong> — postęp i wynik pobierania regionu.</li>
   <li><strong>Usługa pierwszoplanowa (synchronizacja danych)</strong> — pobieranie regionu trwa po zminimalizowaniu aplikacji.</li>
-  <li><strong>Internet i stan sieci</strong> — pobieranie regionu tylko przez Wi-Fi bez limitu danych.</li>
+  <li><strong>Internet i stan sieci</strong> — pobieranie regionu i wysyłanie zgłoszeń tylko przez Wi-Fi bez limitu danych.</li>
 </ul>
 
 <h2>Dzieci</h2>
 <p>Aplikacja nie jest skierowana do dzieci i nie zbiera danych o użytkownikach.</p>
 
 <h2>Twoje prawa</h2>
-<p>W sprawie zgłoszeń wysłanych e-mailem możesz zażądać dostępu do swoich danych, ich sprostowania lub usunięcia, pisząc na adres podany wyżej. Masz też prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych.</p>
+<p>W sprawie zgłoszeń opinii wysłanych e-mailem możesz zażądać dostępu do swoich danych, ich sprostowania lub usunięcia, pisząc na adres podany wyżej. Masz też prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych.</p>
 
 <h2>Zmiany</h2>
 <p>O zmianach tej polityki informuje data na górze strony. Istotne zmiany zostaną opisane w informacji o nowej wersji aplikacji w Google Play.</p>
